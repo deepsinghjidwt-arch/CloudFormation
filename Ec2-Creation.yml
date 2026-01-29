@@ -1,7 +1,12 @@
 #useing code for create ec2 instance help with cloudFromation pipeline
-  
+
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Create EC2 instance with Security Group
+
+Parameters:
+  VpcId: vpc-00cd1fb962a704db2
+    Type: AWS::EC2::VPC::Id
+    Description: Select your VPC
 
 Resources:
   MySecurityGroup:
@@ -27,10 +32,9 @@ Resources:
     Properties:
       InstanceType: t3.micro
       KeyName: linux-cli
-      ImageId: ami-073130f74f5ffb161   # Ensure this AMI exists in your region
+      ImageId: ami-073130f74f5ffb161
       SecurityGroupIds:
         - !Ref MySecurityGroup
       Tags:
         - Key: Name
           Value: Deepak
-
