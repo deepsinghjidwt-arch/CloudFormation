@@ -3,11 +3,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Create EC2 instance with Security Group
 
-Parameters:
-  VpcId:
-    Type: AWS::EC2::VPC::Id
-    Description: Select your VPC
-
 Resources:
   MySecurityGroup:
     Type: AWS::EC2::SecurityGroup
