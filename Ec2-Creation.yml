@@ -17,7 +17,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t3.micro
-      KeyName: linux-cli
+      KeyName: my-acceskey
       ImageId: ami-073130f74f5ffb161 # Replace with the correct AMI ID for your region
       SecurityGroupIds:
         - Ref MySecurityGroup
