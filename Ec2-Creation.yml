@@ -15,9 +15,9 @@ Resources:
   MyEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
-      InstanceType: t3.micro
-      KeyName: my-acceskey
-      ImageId: ami-073130f74f5ffb161 # Replace with the correct AMI ID for your region
+      InstanceType: t2.micro
+      KeyName: my-key
+      ImageId: ami-019715e0d74f695be # Replace with the correct AMI ID for your region
       SecurityGroupIds:
         - !Ref MySecurityGroup
       Tags:
