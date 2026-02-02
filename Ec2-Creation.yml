@@ -2,10 +2,10 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: creating ec2
 
 Resources:
-  EC2SG:
+  MySecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Allow SSH
+      GroupDescription: Enable SSH
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
@@ -19,7 +19,7 @@ Resources:
       KeyName: my-acceskey
       ImageId: ami-073130f74f5ffb161 # Replace with the correct AMI ID for your region
       SecurityGroupIds:
-        - !Ref EC2SG
+        - !Ref MySecurityGroup
       Tags:
         - Key: Name
-          Value: Deepak
+          Value: deepak
